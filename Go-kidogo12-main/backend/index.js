@@ -12,7 +12,7 @@ const API_BASE = "https://testapp.gokidogo.com/webapi/api.php";
 // Proxy for userhome (Home.jsx)
 app.post("/api/userhome", async (req, res) => {
   try {
-    const response = await fetch(`${API_BASE}/userhome`, {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE}/userhome`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(req.body),
@@ -27,7 +27,7 @@ app.post("/api/userhome", async (req, res) => {
 // Proxy for restaurentdetail (RestaurantMenu.jsx)
 app.post("/api/restaurentdetail", async (req, res) => {
   try {
-    const response = await fetch(`${API_BASE}/restaurentdetail`, {
+    const response = await fetch(`${import.meta.env.VITE_API_BASE}/restaurentdetail`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(req.body),
